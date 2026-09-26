@@ -1,4 +1,4 @@
-# Week 17 Track A — Telco Customer Churn MLOps
+# Telco Customer Churn MLOps
 
 ## Dataset
 
