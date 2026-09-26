@@ -1,0 +1,36 @@
+# Local environments and secrets
+.venv/
+.env
+.env.*
+!.env.example
+
+# Python caches and test outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime/generated MLOps state
+mlflow.db
+mlruns/
+mlartifacts/
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+reports/evidently/*
+!reports/evidently/.gitkeep
+
+# Editor, OS, and temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+temp/
+
+data/

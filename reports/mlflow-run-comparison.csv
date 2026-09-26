@@ -1,0 +1,4 @@
+run_name,run_id,model,accuracy,precision,recall,f1,roc_auc,important_hyperparameters
+logistic-regression,bf2be21537b04ba2ac2e0a6128e7595d,logistic_regression,0.8055358410220014,0.6572327044025157,0.5588235294117647,0.6040462427745664,0.8418610659019866,"{""C"": 1.0, ""max_iter"": 1000, ""random_state"": 42, ""solver"": ""lbfgs""}"
+random-forest-baseline,1417d492fc9b4e1686280436fa6038fe,random_forest,0.8041163946061036,0.675,0.5053475935828877,0.5779816513761468,0.8414955178382288,"{""max_depth"": 8, ""min_samples_leaf"": 1, ""min_samples_split"": 2, ""n_estimators"": 100, ""n_jobs"": -1, ""random_state"": 42}"
+random-forest-tuned,febd9e029d3a4738b07e2c3342c51551,random_forest,0.7572746628814763,0.5295202952029521,0.767379679144385,0.6266375545851528,0.8412488051874241,"{""class_weight"": ""balanced"", ""max_depth"": 16, ""min_samples_leaf"": 4, ""min_samples_split"": 10, ""n_estimators"": 300, ""n_jobs"": -1, ""random_state"": 42}"

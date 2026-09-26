@@ -1,0 +1,55 @@
+{
+  "mlflow_version": "3.16.1",
+  "registry_mechanism": "Classic stages remain supported by MLflow 3.16.1; aliases are also recorded for current serving.",
+  "selected_model": {
+    "run_name": "random-forest-tuned",
+    "model_name": "random_forest",
+    "metrics": {
+      "accuracy": 0.7572746628814763,
+      "precision": 0.5295202952029521,
+      "recall": 0.767379679144385,
+      "f1": 0.6266375545851528,
+      "roc_auc": 0.8412488051874241
+    }
+  },
+  "registered_model": {
+    "name": "telco-churn-classifier",
+    "version": 2,
+    "source": "models:/m-f820900a1a044caca47e9795d1fddee7",
+    "run_id": "febd9e029d3a4738b07e2c3342c51551",
+    "current_stage": "Production",
+    "creation_timestamp": 1790435250999,
+    "last_updated_timestamp": 1790435251042,
+    "tags": {
+      "selection_run_name": "random-forest-tuned",
+      "selection_reason": "highest_f1_and_recall_on_held_out_test"
+    }
+  },
+  "lifecycle_transitions": [
+    {
+      "observed_stage": "Staging",
+      "last_updated_timestamp": 1790435251024
+    },
+    {
+      "observed_stage": "Production",
+      "last_updated_timestamp": 1790435251042
+    }
+  ],
+  "aliases": {
+    "candidate": 2,
+    "production": 2
+  },
+  "verified_production_alias": {
+    "name": "telco-churn-classifier",
+    "version": 2,
+    "source": "models:/m-f820900a1a044caca47e9795d1fddee7",
+    "run_id": "febd9e029d3a4738b07e2c3342c51551",
+    "current_stage": "Production",
+    "creation_timestamp": 1790435250999,
+    "last_updated_timestamp": 1790435251042,
+    "tags": {
+      "selection_run_name": "random-forest-tuned",
+      "selection_reason": "highest_f1_and_recall_on_held_out_test"
+    }
+  }
+}

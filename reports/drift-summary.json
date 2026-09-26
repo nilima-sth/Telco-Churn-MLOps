@@ -1,0 +1,117 @@
+{
+  "evidently_version": "0.7.23",
+  "reference": {
+    "rows": 4930,
+    "fraction": 0.7,
+    "churn_distribution": {
+      "No": 0.7304259634888438,
+      "Yes": 0.2695740365111562
+    }
+  },
+  "current": {
+    "rows": 2113,
+    "fraction": 0.3,
+    "churn_distribution": {
+      "No": 0.7444391859914813,
+      "Yes": 0.2555608140085187
+    }
+  },
+  "drift_injection": {
+    "seed": 42,
+    "numeric": {
+      "column": "MonthlyCharges",
+      "additive_shift": 20.0,
+      "noise_std": 2.0
+    },
+    "categorical": {
+      "column": "Contract",
+      "category": "Month-to-month",
+      "target_rate": 0.8
+    },
+    "before_current": {
+      "monthly_charges_mean": 64.48767155702792,
+      "contract_distribution": {
+        "Month-to-month": 0.5390440132513015,
+        "One year": 0.21486038807382868,
+        "Two year": 0.24609559867486985
+      }
+    },
+    "after_current": {
+      "monthly_charges_mean": 84.37976307294174,
+      "contract_distribution": {
+        "Month-to-month": 0.7998106956933271,
+        "One year": 0.08707998106956934,
+        "Two year": 0.11310932323710364
+      }
+    }
+  },
+  "data_drift": {
+    "column_drift_scores": {
+      "gender": 0.017908104039451606,
+      "SeniorCitizen": 0.0008970055984049358,
+      "Partner": 0.0065295862909988955,
+      "Dependents": 0.008382517024412284,
+      "tenure": 0.023670258252344856,
+      "PhoneService": 0.009454030802172015,
+      "MultipleLines": 0.010532662412957198,
+      "InternetService": 0.012528374779265238,
+      "OnlineSecurity": 0.013465183554631568,
+      "OnlineBackup": 0.017771812647855503,
+      "DeviceProtection": 0.012713389878989033,
+      "TechSupport": 0.012264758315282608,
+      "StreamingTV": 0.01235800477317801,
+      "StreamingMovies": 0.021186990342731336,
+      "Contract": 0.1872534989784486,
+      "PaperlessBilling": 0.0071270877771642495,
+      "PaymentMethod": 0.005464812883584829,
+      "MonthlyCharges": 0.6515414499222566,
+      "TotalCharges": 0.5080133808505731,
+      "Churn": 0.011259816415917655
+    },
+    "drift_thresholds": {
+      "gender": 0.1,
+      "SeniorCitizen": 0.1,
+      "Partner": 0.1,
+      "Dependents": 0.1,
+      "tenure": 0.1,
+      "PhoneService": 0.1,
+      "MultipleLines": 0.1,
+      "InternetService": 0.1,
+      "OnlineSecurity": 0.1,
+      "OnlineBackup": 0.1,
+      "DeviceProtection": 0.1,
+      "TechSupport": 0.1,
+      "StreamingTV": 0.1,
+      "StreamingMovies": 0.1,
+      "Contract": 0.1,
+      "PaperlessBilling": 0.1,
+      "PaymentMethod": 0.1,
+      "MonthlyCharges": 0.1,
+      "TotalCharges": 0.55,
+      "Churn": 0.1
+    },
+    "drifted_features": [
+      "Contract",
+      "MonthlyCharges"
+    ],
+    "evidently_drifted_column_count": 2,
+    "evidently_drifted_column_share": 0.1,
+    "dataset_drift_detected": true
+  },
+  "target_drift": {
+    "column": "Churn",
+    "method": "Evidently ValueDrift via current API",
+    "score": 0.011259816415917655,
+    "detected": false
+  },
+  "custom_metrics": {
+    "mean_monthly_charges_shift": 19.50062514190725,
+    "churn_rate_shift": -0.014013222502637479,
+    "month_to_month_rate_shift": 0.24484112165681593,
+    "reference_churn_rate": 0.2695740365111562,
+    "current_churn_rate": 0.2555608140085187,
+    "reference_month_to_month_rate": 0.5549695740365111,
+    "current_month_to_month_rate": 0.7998106956933271
+  },
+  "report_path": "reports/evidently/telco-drift-report.html"
+}

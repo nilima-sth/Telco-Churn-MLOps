@@ -1,0 +1,28 @@
+[project]
+name = "tracka-telco-churn"
+version = "0.1.0"
+description = "Week 17 Track A: reproducible Telco Customer Churn MLOps project"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "evidently",
+    "fastapi",
+    "matplotlib",
+    "mlflow",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

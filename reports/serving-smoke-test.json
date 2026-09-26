@@ -1,0 +1,69 @@
+{
+  "health": {
+    "status": "ok"
+  },
+  "predictions": [
+    {
+      "case": "lower-risk-style",
+      "request": {
+        "gender": "Female",
+        "SeniorCitizen": 0,
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "tenure": 60,
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "Yes",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Two year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Credit card (automatic)",
+        "MonthlyCharges": 65.0,
+        "TotalCharges": 3900.0
+      },
+      "response": {
+        "prediction": 0,
+        "churn": "No",
+        "churn_probability": 0.04889424464424465,
+        "model_name": "telco-churn-classifier",
+        "model_version": "2"
+      }
+    },
+    {
+      "case": "higher-risk-style",
+      "request": {
+        "gender": "Male",
+        "SeniorCitizen": 1,
+        "Partner": "No",
+        "Dependents": "No",
+        "tenure": 2,
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check",
+        "MonthlyCharges": 99.0,
+        "TotalCharges": 198.0
+      },
+      "response": {
+        "prediction": 1,
+        "churn": "Yes",
+        "churn_probability": 0.9589888437027753,
+        "model_name": "telco-churn-classifier",
+        "model_version": "2"
+      }
+    }
+  ]
+}
